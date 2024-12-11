@@ -24,7 +24,7 @@ let quesNo = 0;
 
 async function fetchQuestions() {
     try {
-        const response = await fetch(`http://localhost:${port}/api/questions`);
+        const response = await fetch(`https://new-quiz-one.vercel.app/api/questions`);
         const questions = await response.json();
         quizQuestions = questions;
         actualAnswers = questions.map(q => q.correctAnswer);
