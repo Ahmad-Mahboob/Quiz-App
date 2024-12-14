@@ -42,7 +42,7 @@ function checkResult() {
     quizContainer.style.display = "none"
     container.innerHTML = `
     <h1>You scored: ${currentScore} / ${quizQuestions.length}</h1>
-    <button><a href='/NewQuiz/index.html' class="home">Home</a></button>
+    <button><a href='/' class="home">Home</a></button>
     `
     console.log(`You scored: ${currentScore} / ${quizQuestions.length}`)
     console.log(actualAnswers);
