@@ -23,9 +23,13 @@ submitButton.addEventListener("click", () => {
         return checkResult()
     }
     if (quesNo + 1 < quizQuestions.length) {
-        updateAnswers()
+        let passingValue = updateAnswers()
+        if(passingValue == true ){
         quesNo++
         createQuiz()
+        } else{
+            createQuiz()
+        }
     }
 })
 function checkResult() {
@@ -51,24 +55,14 @@ function updateAnswers() {
         if (options[i].checked) {
             options[i].checked = false
             selectedAnswers.push(options[i].value)
+            console.log("True")
             return true
         }
     }
-    if(testIndex(options)){
-        alert(`Please Select Any Option`)
-    }
+    alert(`Please Select Any Option`)
+    return false
 }
-function testIndex(arr){
-    let value = 0
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i].checked == false){
-            value++
-        }
-    }
-    if(value == arr.length){
-        return true
-    }
-}
+
 
 createQuiz()
 
