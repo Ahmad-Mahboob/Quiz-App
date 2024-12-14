@@ -13,13 +13,13 @@ let options = document.querySelectorAll(".options")
 let quizContainer = document.querySelector(".quiz")
 let container = document.querySelector(".container")
 const port = 5000
-// const actualAnswers = ['Islamabad', 'Lahore', 'Peshawar', 'Karachi', 'Quetta']
+const actualAnswers = ['Islamabad', 'Lahore', 'Peshawar', 'Karachi', 'Quetta']
 // const selectedAnswers = []
 // let quesNo = 0
 
 quizQuestions = [];
 let selectedAnswers = [];
-let actualAnswers = [];
+// let actualAnswers = [];
 let quesNo = 0;
 
 async function fetchQuestions() {
