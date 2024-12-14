@@ -51,12 +51,24 @@ function updateAnswers() {
         if (options[i].checked) {
             options[i].checked = false
             selectedAnswers.push(options[i].value)
-
-            return
+            return true
         }
     }
+    if(testIndex(options)){
+        alert(`Please Select Any Option`)
+    }
 }
-
+function testIndex(arr){
+    let value = 0
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].checked == false){
+            value++
+        }
+    }
+    if(value == arr.length){
+        return true
+    }
+}
 
 createQuiz()
 
